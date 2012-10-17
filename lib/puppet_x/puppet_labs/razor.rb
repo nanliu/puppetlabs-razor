@@ -20,6 +20,9 @@ module PuppetX::PuppetLabs
         @images = {}
       end
       @images = image_map(@images)
+      @images.each do |i|
+        i[:name] ||= i[:isoname]
+      end
     end
 
     def get_models
