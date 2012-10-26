@@ -18,8 +18,8 @@ rz_model { 'vmware':
                  'hostname_prefix' => 'esx',
                  'root_password'   => 'password',
                  'esx_license'     => 'AAAAA-BBBBB-CCCCC-DDDDD-EEEEE',
-                 'nameserver'      => '192.168.1.1',
-                 'gateway'         => '192.168.1.1',
+                 'nameserver'      => '192.168.232.1',
+                 'gateway'         => '192.168.232.1',
                  'ntpserver'       => 'ntp.puppetlabs.lan',
                  'vcenter_name'    => 'vcsa.puppetlabs.lan',
                  'vcenter_datacenter_path' => 'dc1',
@@ -41,6 +41,12 @@ rz_tag { 'vmware':
     } ],
 }
 
-#rz_policy { 'vmware':
-#
-#}
+rz_policy { 'vmware':
+  ensure  => 'present',
+  broker  => 'none',
+  model   => 'vmware',
+  enabled => 'true',
+  tags    => ['vmware'],
+  template => 'vmware_hypervisor',
+  maximum => 10,
+}
