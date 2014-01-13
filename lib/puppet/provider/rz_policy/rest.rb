@@ -18,7 +18,8 @@ Puppet::Type.type(:rz_policy).provide(
       'root_password' => resource[:root_password],
       'max_count'     => resource[:max_count],
       'rule_number'   => resource[:rule_number],
-      'tags'          => resource[:tags]
+      'tags'          => resource[:tags],
+      'enabled'       => resource[:enabled]
     }
     [:repo, :installer, :broker].each do |attr|
       if resource[attr]
