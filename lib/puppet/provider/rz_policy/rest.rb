@@ -1,4 +1,5 @@
 require 'puppet/type'
+require 'puppet/provider/razor'
 
 Puppet::Type.type(:rz_policy).provide(
   :rest,
