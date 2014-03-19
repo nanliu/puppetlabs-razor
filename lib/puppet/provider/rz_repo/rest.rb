@@ -1,4 +1,8 @@
-require 'puppet/provider/razor'
+begin
+  require 'puppet/provider/razor'
+rescue LoadError
+  require_relative '../razor'
+end
 
 Puppet::Type.type(:rz_repo).provide(
   :rest,
