@@ -2,10 +2,12 @@ fixtures:
   repositories:
     stdlib: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
     concat: 'https://github.com/puppetlabs/puppetlabs-concat.git'
+    dhcp: 'https://github.com/puppetlabs/puppetlabs-dhcp.git'
     firewall: "https://github.com/puppetlabs/puppetlabs-firewall.git"
     java: 'git://github.com/puppetlabs/puppetlabs-java.git'
     postgresql: 'git://github.com/puppetlabs/puppetlabs-postgresql.git'
     tftp: 'git://github.com/puppetlabs/puppetlabs-tftp.git'
     xinetd: 'git://github.com/puppetlabs/puppetlabs-xinetd.git'
+    staging: 'git://github.com/nanliu/puppet-staging.git'
   symlinks:
     razor: "#{source_dir}"

@@ -6,7 +6,9 @@ Vagrant.configure('2') do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  #config.vm.synced_folder 'manifests', '/tmp/manifests', 'tests'
+  config.vm.network 'private_network', :ip => '192.168.61.3'
+  #config.vm.network 'vmnet2',
+
   config.vm.synced_folder './', '/etc/puppet/modules/razor'
 
   config.vm.define :razor do |m|
