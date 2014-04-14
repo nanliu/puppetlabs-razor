@@ -17,7 +17,6 @@ Puppet::Type.type(:rz_repo).provide(
     args = {
       'name'          => resource[:name],
       'iso-url'       => resource[:iso_url],
-      'url'           => resource[:url]
     }
 
     post('create-repo', args)

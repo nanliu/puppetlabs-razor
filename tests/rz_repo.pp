@@ -7,3 +7,8 @@ rz_repo { 'centos_minimal':
   ensure  => present,
   iso_url => '/opt/iso/CentOS-6.5-minimal.iso',
 }
+
+rz_repo { 'centos_deprecated':
+  ensure  => present,
+  url => '/opt/iso/CentOS-6.5-minimal.iso',
+}
